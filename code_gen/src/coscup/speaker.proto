@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package coscup_2023;
+
+option go_package = "gen/coscuppb";
+
+message Speaker {
+    int64 id = 1;
+    string name = 2;
+}
+
+
+
+
+

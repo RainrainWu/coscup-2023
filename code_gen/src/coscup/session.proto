@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package coscup_2023;
+
+import "code_gen/src/coscup/speaker.proto";
+import "google/protobuf/descriptor.proto";
+
+option go_package = "gen/coscuppb";
+
+extend google.protobuf.FieldOptions {
+    int32 len_limit = 50000;
+}
+
+message Session {
+    Speaker speaker = 1;
+    string intro = 2 [(len_limit) = 15];
+}
